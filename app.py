@@ -42,7 +42,10 @@ load_dotenv()
 GEMINI_MODEL = "gemini-2.5-flash-lite"
 
 # Read API key safely from environment variable (Never hardcoded!)
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "").strip()
+try:
+    GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"].strip()
+except Exception:
+    GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "").strip()
 
 # -----------------------------------------------------------------------------
 # 2. Page Configuration
