@@ -1,0 +1,15 @@
+# Sensitive environment variables and API keys
+.env
+
+# Python virtual environments
+venv/
+.venv/
+env/
+
+# Python cache & bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Streamlit local configurations
+.streamlit/
